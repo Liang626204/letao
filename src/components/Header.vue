@@ -1,5 +1,5 @@
 <template>
-  <mt-header title="乐淘">
+  <mt-header title="乐淘" fixed>
   <router-link to="/" slot="left">
     <mt-button icon="back">返回</mt-button>
   </router-link>

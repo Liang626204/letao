@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <Header/>
+    <le-header/>
+    <le-contents/>
+    <le-footer/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import Contents from '@/components/Contents'
+import Footer from '@/components/Footer'
 export default {
   components: {
-    Header
+    'le-header': Header,
+    'le-contents': Contents,
+    'le-footer': Footer
   },
   name: 'App'
 }
