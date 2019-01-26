@@ -47,6 +47,7 @@ export default{
   }
   .nav{
     margin-top: 10px;
+    margin-bottom: 10px;
   }
   .nav li {
     width: 33.33%;
@@ -59,8 +60,8 @@ export default{
     margin-bottom: 10px;
    background-color: #fff;
   }
-  .produst li :nth-last-of-type(2n){
+  .produst li:nth-of-type(2n){
 
-    margin-left: 10px;
+    margin-left: 5px;
   }
 </style>

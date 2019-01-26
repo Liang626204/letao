@@ -28,3 +28,8 @@
 </template>
 <script>
 </script>
+<style lang="scss" scoped>
+.isactive{
+  color: red
+}
+</style>

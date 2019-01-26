@@ -5,8 +5,8 @@
 </template>
 <style lang="scss" scoped>
 .contents{
-  padding-top: 40px;
-  padding-bottom: 60px;
-  overflow: scroll;
+   height: 100%;
+  padding:  40px 5px 65px 5px;
 }
+
 </style>

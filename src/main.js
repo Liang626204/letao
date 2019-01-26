@@ -6,6 +6,8 @@ import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/styles/index.scss'
+/* 滑动组件 */
+// import '@/lib/iscroll/iscroll.js'
 Vue.use(MintUI)
 
 Vue.config.productionTip = false

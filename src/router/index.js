@@ -4,6 +4,7 @@ import Cart from '@/views/Cart'
 import Category from '@/views/Category'
 import Home from '@/views/Home'
 import User from '@/views/User'
+import Search from '@/views/Search'
 // import HelloWorld from '@/components/HelloWorld'
 // import Header from '@/components/Header'
 
@@ -35,7 +36,13 @@ export default new Router({
       path: '/user',
       name: 'user',
       component: User
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: Search
     }
-
-  ]
+  ],
+  /* 路由添加的时候添加的样式 */
+  linkActiveClass: 'isactive'
 })
