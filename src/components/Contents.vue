@@ -6,7 +6,7 @@
 <style lang="scss" scoped>
 .contents{
    height: 100%;
-  padding:  40px 5px 65px 5px;
+  padding:  40px 0px 65px 0px;
 }
 
 </style>

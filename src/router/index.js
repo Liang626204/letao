@@ -5,6 +5,7 @@ import Category from '@/views/Category'
 import Home from '@/views/Home'
 import User from '@/views/User'
 import Search from '@/views/Search'
+import SearchList from '@/views/SearchList'
 // import HelloWorld from '@/components/HelloWorld'
 // import Header from '@/components/Header'
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: Search
+    },
+    {
+      path: '/searchList',
+      name: 'searchList',
+      component: SearchList
     }
   ],
   /* 路由添加的时候添加的样式 */
