@@ -10,3 +10,6 @@ export const secondCategory = id => axios.get('/category/querySecondCategory', {
 
 /* 搜索详细 */
 export const searchData = obj => axios.get('/product/queryProduct', {params: obj})
+
+/* 商品详情 */
+export const productinfo = id => axios.get('/product/queryProductDetail', {params: {id: id}})

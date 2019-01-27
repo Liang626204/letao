@@ -9,9 +9,10 @@
       class="loadlist"
     >
         <div class="goodinfo clearfix">
-          <router-link to="" v-for="(item, index) in goodlist" :key="index" class="info ">
+          <router-link :to="'/produstdefault'+item.id" v-for="(item, index) in goodlist" :key="index" class="info ">
           <img :src="'http://127.0.0.1:3000'+item.pic[0].picAddr" alt="">
           <p class="lt_prodesc">{{item.proName}}</p>
+          <mt-button type="primary">购买</mt-button>
           </router-link>
         </div>
     </mt-loadmore>
