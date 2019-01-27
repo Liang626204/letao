@@ -7,6 +7,7 @@ import User from '@/views/User'
 import Search from '@/views/Search'
 import SearchList from '@/views/SearchList'
 import Produstdefault from '@/views/Produstdefault'
+import Login from '@/views/Login'
 // import HelloWorld from '@/components/HelloWorld'
 // import Header from '@/components/Header'
 
@@ -20,7 +21,7 @@ export default new Router({
       redirect: {name: 'home'}
     },
     {
-      path: '/cart/addCart',
+      path: '/cart',
       name: 'cart',
       component: Cart
     },
@@ -53,6 +54,11 @@ export default new Router({
       path: '/produstdefault:id',
       name: 'produstdefault',
       component: Produstdefault
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ],
   /* 路由添加的时候添加的样式 */

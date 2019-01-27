@@ -41,7 +41,7 @@
   </div>
 </template>
 <script>
-import { productinfo } from '@/api/index.js'
+import { productinfo, toCar } from '@/api/index.js'
 var id = ''
 export default {
   data () {
@@ -62,7 +62,6 @@ export default {
   },
   watch: {
     rangeValue (val) {
-      console.log(val)
     }
   },
   created () {
@@ -73,7 +72,6 @@ export default {
       id = this.$route.params.id
       productinfo(id)
         .then(res => {
-          console.log(res.data)
           this.name = res.data.proName
           this.price = res.data.price
           this.oldPrice = res.data.oldPrice
@@ -98,11 +96,31 @@ export default {
       this.obj.productid = this.$route.params.id
       this.obj.num = this.num
       this.obj.size = this.rangeValue
-      console.log(this.obj)
     },
-    /* 跳到购物车 */
+    /* 加入购物车 */
     tocar () {
       this.getAll()
+      toCar(this.obj)
+        .then(res => {
+          if (res.data.error === 400) {
+            this.$router.push({
+              path: '/login',
+              query: {
+                url: location.href
+              }
+            })
+          } else {
+            console.log(res)
+            if (res.request.status === 200) {
+              console.log(200)
+              this.$toast({
+                message: res.request.statusText,
+                position: 'middle',
+                duration: 5000
+              })
+            }
+          }
+        })
     }
   }
 }
